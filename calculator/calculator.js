@@ -49,12 +49,11 @@ function calculateMonthlyPayment(data) {
   let n = data.years*12;
   let monthly = ((P * i)/(1 - ((1+i)**(-n))));
 
-  return `$${(Math.floor(monthly*100))/100}`
- 
+  return ((Math.floor(monthly*100))/100)
 }
 
 // Given a string representing the monthly payment value,
 // update the UI to show the value.
 function updateMonthly(monthly) {
-  document.getElementById("monthly-payment").innerText = monthly
+  document.getElementById("monthly-payment").innerText = `$${monthly}`
 }
