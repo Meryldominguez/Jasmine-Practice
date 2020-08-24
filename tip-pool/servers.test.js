@@ -12,6 +12,11 @@ describe("Servers test (with setup and tear-down)", function() {
   });
 
   afterEach(function() {
-    // teardown logic
+    delete allServers["server1"]
+    document.getElementById("server1").remove()
   });
 });
+
+describe("testing submitServerInfo()") {
+  expect
+}
