@@ -28,14 +28,14 @@ function updateServerTable() {
   serverTbody.innerHTML = '';
 
   for (let key in allServers) {
-    let curServer = allServers[key];
+    let currentServer = allServers[key];
 
     let newTr = document.createElement('tr');
     newTr.setAttribute('id', key);
 
     let tipAverage = sumPaymentTotal('tipAmt') / Object.keys(allServers).length;
 
-    appendTd(newTr, curServer.serverName);
+    appendTd(newTr, currentServer.serverName);
     appendTd(newTr, '$' + tipAverage.toFixed(2));
 
     serverTbody.append(newTr);

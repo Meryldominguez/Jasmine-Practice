@@ -10,7 +10,7 @@ let paymentId = 0;
 
 paymentForm.addEventListener('submit', submitPaymentInfo);
 
-// Add a curPayment object to allPayments, update html and reset input values
+// Add a currentPayment object to allPayments, update html and reset input values
 function submitPaymentInfo(evt) {
   if (evt) evt.preventDefault(); // when running tests there is no event
 
