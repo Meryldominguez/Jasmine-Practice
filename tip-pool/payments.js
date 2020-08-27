@@ -50,12 +50,13 @@ function createCurPayment() {
 // Create table row element and pass to appendTd with input value
 function appendPaymentTable(curPayment) {
   let newTr = document.createElement('tr');
+
   newTr.id = 'payment' + paymentId;
 
   appendTd(newTr, '$' + curPayment.billAmt);
   appendTd(newTr, '$' + curPayment.tipAmt);
   appendTd(newTr, curPayment.tipPercent + '%');
-
+  appendDeletebtn(newTr, "X");
   paymentTbody.append(newTr);
 }
 
